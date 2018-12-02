@@ -1,25 +1,192 @@
+/* DESKTOP STYLES */
+body {
+  overflow: hidden;
+}
+
 .App {
+  height: 100vh;
+  text-align: center;
+  width: 100vw;
+}
+
+.header {
+  background-color: #800000;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: center;
+}
+
+.header-title {
+  color: #FFFFFF;
+  font: 50px/normal 'Great Vibes', cursive;
+  margin: 0;
+}
+
+.main {
+  background-color: #800000;
+  display: flex;
+  height: calc(100vh - 120px);
+  justify-content: center;
+}
+
+.main-feature {
+  background-color: #FFFFFF;
+  border: solid 2px #800000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+  width: calc(33%);
+}
+
+.main-feature__title h2 {
+  color: #800000;
+  font: 3.5rem/normal 'Great Vibes', cursive;
+  margin: 0 0 1.25rem;
+  transition: 1.5s;
+}
+
+.main-feature__title p {
+  color: #800040;
+  font: 18px/normal 'Calibri';
+  margin: 0 0 1.25rem;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.selected {
+  height: 100%;
+  width: 100%;
+}
+
+.main-feature.selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.selected > .main-feature__title {
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.selected > .main-feature__title h2 {
+  font-size: 50px;
+}
+
+.selected > .main-feature__title p {
+  display: inline-block;
+  font-size: 25px;
+  max-width: 725px;
+  opacity: 1;
+}
+
+.selected > .main-feature__photos {
+  display: flex;
+  opacity: 1;
+}
+
+.selected > .main-feature__learnMore {
+  display: inline-block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.main-feature__photos {
+  box-sizing: border-box;
+  display: none;
+  height: calc(50%);
+  justify-content: center;
+  padding-bottom: 1.25rem;
+  opacity: 0;
+  overflow: hidden;
+  transition: 1.5s;
+  width: 100%;
+}
+
+.not-selected {
+  padding: 0;
+  width: 0px;
+}
+
+.not-selected h2,
+.not-selected p {
+  opacity: 0;
+}
+
+.angelContainer {
+  transition: 1.5s;
+}
+
+.cheesecakeContainer {
+  transition: 1.5s;
+}
+
+.createContainer {
+  transition: 1.5s;
+}
+
+.main-feature__image {
+  border: solid 2px #800000;
+  display: inline-block;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.main-feature__learnMore {
+  background-color: #FFFFFF;
+  border: solid 2px #800000;
+  border-radius: 10px;
+  display: none;
+  padding: 16px 20px;
+  transition: 1.5s;
+}
+
+.main-feature__learnMore a {
+  color: #800000;
+  font: bold 20px/normal 'Calibria';
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 1.5s;
+}
+
+.main-feature__learnMore:hover {
+  background-color: #800000;
+}
+
+.main-feature__learnMore a:hover {
+  color: #FFFFFF;
+}
+
+.footer {
+  background-color: #800000;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footer p {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font: bold 15px/normal 'Calibria';
+  height: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-additionalInfo {
+  display: flex;
+}
+
+.footer-additionalInfo > p {
+  margin: 0 0 0 15px;
 }
 
 @keyframes App-logo-spin {
